@@ -15,9 +15,9 @@ class UI:
         self.sliderList = []
         self.buttonList = []
         pygame.font.init()
-        self.bigFont = pygame.font.SysFont('Jygquip 1', 60)
-        self.smallFont = pygame.font.SysFont('Jygquip 1', 30)
-        self.tinyFont = pygame.font.SysFont('Jygquip 1', 21)
+        self.bigFont = pygame.font.Font('C:/Users/caryk/AppData/Local/Microsoft/Windows/Fonts/Jygquip 1.ttf', 60)
+        self.smallFont = pygame.font.Font('C:/Users/caryk/AppData/Local/Microsoft/Windows/Fonts/Jygquip 1.ttf', 30)
+        self.tinyFont = pygame.font.Font('C:/Users/caryk/AppData/Local/Microsoft/Windows/Fonts/Jygquip 1.ttf', 21)
         self.BACKGROUND_PIC = pygame.image.load("visuals/background.png")
         self.W_W = _W_W
         self.W_H = _W_H
@@ -353,6 +353,7 @@ class UI:
 
     def detectEvents(self):
         for event in pygame.event.get():
+            if event.type == pygame.QUIT:
                 pygame.quit()
             if event.type == pygame.KEYDOWN:
                 new_gen = None
