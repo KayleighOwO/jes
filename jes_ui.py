@@ -353,6 +353,7 @@ class UI:
 
     def detectEvents(self):
         for event in pygame.event.get():
+                pygame.quit()
             if event.type == pygame.KEYDOWN:
                 new_gen = None
                 if event.key == pygame.K_LEFT:
